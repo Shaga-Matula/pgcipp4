@@ -9,8 +9,8 @@ assignees: ''
 
 As a "role" I want "capability"  so the "received benefit"
 
-## Estimation of effort
+## Estimation of Effort
 TBD
 
-## Acceptance criteria
+## Acceptance Criteria
 TBD
