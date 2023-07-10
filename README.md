@@ -26,7 +26,9 @@
 
 1.  [Introduction](#Introduction)
     1.  [Project Goals](#Project-Goals)
-    2.  [User Experience](#User-experience)
+    2.  [User experience](#User-experience)
+    3.  [Agile Aproach](#Agile-Aproach)
+  
    
 
 <hr style="border:1px solid white">
@@ -50,3 +52,8 @@
 * Accept upper and lower case input for letters in coordinates to speed up user experience. 
 * Add help function to game so user can recall help at any time.
 * Add quit game function so user can quit game if so desired.
+
+
+## Agile Aproach
+
+* User stories are implamented to assist the running of the project
