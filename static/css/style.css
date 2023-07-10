@@ -1,7 +1,12 @@
-.testcss{
+.testcss, bg-dark{
     color:red
 }
 
 .shoto_logo{
-    height: 50px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.navbar-header{
+    background-color: black;
 }
