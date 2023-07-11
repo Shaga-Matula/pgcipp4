@@ -4,4 +4,4 @@ from django.shortcuts import render
 
 
 def firstpage(request):
-    return render(request, 'shoto.html')
+    return render(request, 'index.html')
