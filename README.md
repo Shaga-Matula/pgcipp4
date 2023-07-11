@@ -57,3 +57,9 @@
 ## Agile Aproach
 
 * User stories are implamented to assist the running of the project
+
+## Design 
+
+### Landing Page
+
+![Landing Page](static/images/readme_images/landing%20_page%20_view.png)

@@ -6,12 +6,24 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Shotokan Karate</title>
+
+    <!--- Boot Strap  --->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!--- Static CSS location --->
+
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <!-- Font Awesome  -->
+
     <script src="https://kit.fontawesome.com/21d09db21b.js" crossorigin="anonymous"></script>
+    <!-- Site Title  -->
+
+    <title>Shotokan Karate</title>
 </head>
 
 <body>
@@ -32,10 +44,78 @@
             </div>
         </div>
     </nav>
-    <!-- Remove the container if you want to extend the Footer to full width. -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-6 order-2 order-md-1">
+                <p> Left side</p>
+            </div>
+
+
+        
+
+                <div class="col-3 order-1 order-md-2 contacts-page">
+                    <form class="my-1" method="post" action="https://formdump.codeinstitute.net/">
+                        <fieldset>
+                            <legend>Get In Touch</legend>
+
+                            <div class="form-group">
+                                <label for="fname">First Name:</label>
+                                <input type="text" class="form-control" name="fname" id="fname" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="lname">Last Name:</label>
+                                <input type="text" class="form-control" name="lname" id="lname" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email Address:</label>
+                                <input type="email" class="form-control" name="email" id="email" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Phone Number: </label>
+                                <input type="tel" class="form-control" name="phone" id="phone" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="msg">Message: </label>
+                                <textarea class="form-control" name="msg" id="msg" rows="5" required></textarea>
+                            </div>
+
+                            <div class="what-level">
+                                <p>Which level you are enquiring about:</p>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="chk1" id="chk1" value="beginner"
+                                        required>
+                                    <label class="form-check-label" for="chk1">Beginner Level</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="chk1" id="chk2"
+                                        value="intermediate">
+                                    <label class="form-check-label" for="chk2">Intermediate Level</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="chk1" id="chk3" value="advanced">
+                                    <label class="form-check-label" for="chk3">Advanced Level</label>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </fieldset>
+                    </form>
+                </div>
+        </div>
+    </div>
+
+
+
+
+
+
     <div class="container mt-auto">
 
-        <footer class=" fixed-bottom text-center text-white" style="background-color: #f1f1f1;">
+        <footer class="text-center text-white" style="background-color: #f1f1f1;">
             <!-- Grid container -->
             <div class="container pt-4">
                 <!-- Section: Social media -->
@@ -76,7 +156,7 @@
         </footer>
 
     </div>
-   
+
     <!-- End of .container -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous">
