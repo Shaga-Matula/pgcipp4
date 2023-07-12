@@ -71,7 +71,14 @@ Normalizing a database table means organizing the information in a way that make
 
 ![First Excel Table draf before Normalizing ](static/images/readme_images/mock_database.png)
 
+### Pre-Normalizing 
+This is the database table named "Students" before normalizing; it stores information about martial arts students. It has 20 fields, including a primary key field "CustomerID" and also relevant data values, such as Varchar and Boolean. Please note this is a mock-up and tables and data values may change during design and implementation. 
+
+
+<img src="static/images/readme_images/first_table.png" width="150" height="300" alt="Pre-Normalizing">
+
 
 ## Tools
 ### Responsinator :-   http://www.responsinator.com/?url=https%3A%2F%2F8000-shagamatula-pgcipp4-wgmitq7ua1e.ws-eu101.gitpod.io%2F
+### QuickDBD : -       https://app.quickdatabasediagrams.com
 
