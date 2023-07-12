@@ -57,13 +57,21 @@
 ## Agile Aproach
 
 * User stories are implamented to assist the running of the project
-
+<hr style="border:1px solid white">
 ## Design 
 
 ### Landing Page
 
 ![Landing Page](static/images/readme_images/landing%20_page%20_view.png)
 
+### DataBase Design
+
+### Normalizing definition
+Normalizing a database table means organizing the information in a way that makes it easier to manage and prevents mistakes. It's like putting your toys away in a toy box so you can find them easily and don't lose any. In a database, we put similar information together in a table and make sure each piece of information is only stored in one place. This helps to avoid repeating information and makes it easier to update the information if needed. Normalizing a database table is like keeping your room clean and tidy so you can find everything you need quickly and easily.
+
+![First Excel Table draf before Normalizing ](static/images/readme_images/mock_database.png)
+
 
 ## Tools
 ### Responsinator :-   http://www.responsinator.com/?url=https%3A%2F%2F8000-shagamatula-pgcipp4-wgmitq7ua1e.ws-eu101.gitpod.io%2F
+
