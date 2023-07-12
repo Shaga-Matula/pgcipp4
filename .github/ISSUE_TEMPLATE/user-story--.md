@@ -7,7 +7,7 @@ assignees: ''
 
 ---
 
-As a "role" I want "capability"  so the "received benefit"
+As a "role" I want "capability"  so that I "received benefit"
 
 ## Estimation of Effort :
 TBD
