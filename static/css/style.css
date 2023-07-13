@@ -28,3 +28,17 @@ background-size: cover;
     left: 0;
     right: 0;
 }
+
+/* Botton at bottom of account/login.html */
+
+.btn-signup {
+    background-color: #23BBBB;
+    color: #fff;
+}
+
+.btn-signup:hover,
+.btn-signup:active {
+    background-color: #fff;
+    color: #23BBBB;
+}
+
