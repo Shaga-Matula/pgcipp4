@@ -2,12 +2,28 @@
 
 {% block content %}
 
+
+
 <div class="container">
     <div class="row mx-auto">
         <div class="order-1 order-md-1 col-sm-12 col-md-12 col-lg-6">
-            <h1><p><strong>An introduction to Karate</strong></p></h1>
-            <h2><p>A beginner’s guide</p></h2>
-            <h2><p>What is Karate?</p></h2>
+            {% load account %}
+            {% if user.is_authenticated %}
+            <h4 class="align-items-center text-black-50">Welcome, {{ username }}!</h4>
+            {% else %}
+
+            <h4 class="align-items-center text-black-50">Welcome, guest</h4>
+
+            {% endif %}
+            <h2>
+                <p><strong>An introduction to Karate</strong></p>
+            </h2>
+            <h2>
+                <p>A beginner’s guide</p>
+            </h2>
+            <h2>
+                <p>What is Karate?</p>
+            </h2>
             <p>Karate (translated as ‘empty hand’) is an ancient method of unarmed fighting with a moral warrior code
                 emphasising punching, striking and kicking. It was developed on the Island of Okinawa (now part of
                 Japan) by fusing local fighting skills with techniques from near-by China. It was practised as an art of

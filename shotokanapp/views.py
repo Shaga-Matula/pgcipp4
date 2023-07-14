@@ -1,7 +1,13 @@
 from django.shortcuts import render
+from django.views import generic, View
 
 # Create your views here.
 
 
-def firstpage(request):
-    return render(request, 'index.html')
+class firstpage(View):
+
+    def get(self, request, *args, **kwargs):
+        context = {
+        'username': request.user.username,
+        }
+        return render(request, 'index.html', context)
