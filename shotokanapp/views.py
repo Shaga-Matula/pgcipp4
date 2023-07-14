@@ -8,6 +8,7 @@ class firstpage(View):
 
     def get(self, request, *args, **kwargs):
         context = {
-        'username': request.user.username,
+            'username': request.user.username,
+
         }
         return render(request, 'index.html', context)
