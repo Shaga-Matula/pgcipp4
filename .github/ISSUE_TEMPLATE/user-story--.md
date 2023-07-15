@@ -2,8 +2,8 @@
 name: 'User Story :'
 about: This is my default user story template
 title: 'User Story : <Title>'
-labels: ''
-assignees: ''
+labels: Software Development
+assignees: Shaga-Matula
 
 ---
 
@@ -14,10 +14,14 @@ TBD
 
 ## Tasks :
  
-[ ] Task 1
-[ ] Task 2
+[  ] Task 1 :
+[  ] Task 2 :
+[  ] Task 3 :
+[  ] Task 4 :
+
 
 ## Acceptance Criteria :
-
-. Acceptance Criteria " 1 " :
-. Acceptance Criteria " " :
+Acceptance Criteria :
+Acceptance Criteria :
+Acceptance Criteria :
+Acceptance Criteria :
