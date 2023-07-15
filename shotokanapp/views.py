@@ -12,3 +12,9 @@ class firstpage(View):
 
         }
         return render(request, 'index.html', context)
+
+
+class form_page(View):
+
+    def get(self, request, *args, **kwargs):
+        return render(request, 'form_page.html',)
