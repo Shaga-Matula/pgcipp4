@@ -1,7 +1,7 @@
+from django.views.generic import View
 from django.shortcuts import render
-from django.views import View
-from .forms import StudentLvlForm
-from django.shortcuts import redirect
+from django.views.generic import TemplateView
+from .forms import StudentForm
 
 
 class firstpage(View):
@@ -11,14 +11,15 @@ class firstpage(View):
         }
         return render(request, 'index.html', context)
 
-from .forms import StudentLvlForm
 
-def create_student_lvl(request):
-    if request.method == 'POST':
-        form = StudentLvlForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return redirect('success_page')
-    else:
-        form = StudentLvlForm()
-    return render(request, 'create_student_lvl.html', {'form': form})
+class CreateStudent(TemplateView):
+    template_name = 'create_student.html' 
+
+    def get(self, request):
+        form = StudentForm()
+        return render(request, self.template_name, {'form': form})
+
+
+
+
+

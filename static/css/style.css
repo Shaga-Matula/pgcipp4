@@ -42,3 +42,10 @@ background-size: cover;
     color: #23BBBB;
 }
 
+.form-box{
+    height: auto;
+    background-color: grey;
+    justify-self: center;
+    align-items: center;
+}
+
