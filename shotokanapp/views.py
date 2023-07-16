@@ -1,13 +1,9 @@
-<<<<<<< HEAD
-from django.views import View
-from django.shortcuts import render
 from django.http import request
-=======
 from django.views.generic import View
 from django.shortcuts import render
 from django.views.generic import TemplateView
->>>>>>> eb2f6c1777b1c543e023b76ec57259ad202f725f
 from .forms import StudentForm
+
 
 def student_creation(request):
     if request.method == 'POST':
@@ -19,6 +15,7 @@ def student_creation(request):
         form = StudentForm()
     return render(request, 'student_creation.html', {'form': form})
 
+
 class firstpage(View):
     def get(self, request, *args, **kwargs):
         context = {
@@ -26,20 +23,14 @@ class firstpage(View):
         }
         return render(request, 'index.html', context)
 
-<<<<<<< HEAD
+
 def success_page(request):
     return render(request, 'success_page.html')
-=======
+
 
 class CreateStudent(TemplateView):
-    template_name = 'create_student.html' 
+    template_name = 'create_student.html'
 
     def get(self, request):
         form = StudentForm()
         return render(request, self.template_name, {'form': form})
-
-
-
-
-
->>>>>>> eb2f6c1777b1c543e023b76ec57259ad202f725f
