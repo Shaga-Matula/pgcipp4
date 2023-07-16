@@ -21,13 +21,13 @@ class Student_Lvl(models.Model):
 
 
 class Student_info(models.Model):
-    Student_ID = models.IntegerField(primary_key=True)
+    Student_ID = models.AutoField(primary_key=True)
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
     Date_of_birth = models.DateField()
     Email = models.EmailField(max_length=50)
     Address_1 = models.CharField(max_length=50)
-    Address_2 = models.CharField(max_length=50, null=True)
+    Address_2 = models.CharField(max_length=50, blank=True, null=True) 
     Post_code = models.CharField(max_length=10)
     Content = models.TextField()
     updated_on = models.DateTimeField(auto_now=True)

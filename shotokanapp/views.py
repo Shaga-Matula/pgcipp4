@@ -1,6 +1,6 @@
 from django.http import request
 from django.views.generic import View
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views.generic import TemplateView
 from .forms import StudentForm
 
@@ -27,10 +27,3 @@ class firstpage(View):
 def success_page(request):
     return render(request, 'success_page.html')
 
-
-class CreateStudent(TemplateView):
-    template_name = 'create_student.html'
-
-    def get(self, request):
-        form = StudentForm()
-        return render(request, self.template_name, {'form': form})
