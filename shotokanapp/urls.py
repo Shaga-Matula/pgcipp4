@@ -1,9 +1,11 @@
-from . import views
+from .import views
+from .views import student_creation
 from django.urls import path
-from .views import create_student_lvl
+
+
 
 urlpatterns = [
     path('', views.firstpage.as_view(), name="home"),
-    path('create-student-lvl/', create_student_lvl, name='create_student_lvl'),
+    path('success_page/', views.success_page, name='success'),
+    path('student_creation/', views.student_creation, name='Student Creation'),
 ]
-

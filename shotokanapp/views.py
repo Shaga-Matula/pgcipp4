@@ -1,8 +1,17 @@
-from django.shortcuts import render
 from django.views import View
-from .forms import StudentLvlForm
-from django.shortcuts import redirect
+from django.shortcuts import render
+from django.http import request
+from .forms import StudentForm
 
+def student_creation(request):
+    if request.method == 'POST':
+        form = StudentForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('success')  # Redirect to a success page
+    else:
+        form = StudentForm()
+    return render(request, 'student_creation.html', {'form': form})
 
 class firstpage(View):
     def get(self, request, *args, **kwargs):
@@ -11,14 +20,5 @@ class firstpage(View):
         }
         return render(request, 'index.html', context)
 
-from .forms import StudentLvlForm
-
-def create_student_lvl(request):
-    if request.method == 'POST':
-        form = StudentLvlForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return redirect('success_page')
-    else:
-        form = StudentLvlForm()
-    return render(request, 'create_student_lvl.html', {'form': form})
+def success_page(request):
+    return render(request, 'success_page.html')
