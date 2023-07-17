@@ -31,10 +31,10 @@ class Student_info(models.Model):
     Post_code = models.CharField(max_length=10)
     Content = models.TextField()
     updated_on = models.DateTimeField(auto_now=True)
-    Student_Grade = models.ForeignKey(Student_Lvl, on_delete=models.CASCADE)
+    Student_Grade = models.ForeignKey(Student_Lvl, on_delete=models.CASCADE, default=0)
 
     class Meta:
-        ordering = ["-Student_ID"]  # "Student_ID"
+        ordering = ["-last_name"]  # "Student_ID"
 
     def __str__(self):
         return f"{self.first_name} {self.last_name}"  # 
