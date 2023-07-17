@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Student List</h1>
+<div class="table-responsive-sm">
+<table class="table table-dark table-bordered table-responsive-lg table-responsive-md table-responsive-sm">
+    <thead ></thead>
+        <tr>
+            <th>Student ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Date of Birth</th>
+            <th>Email</th>
+            <th>Address 1</th>
+            <th>Address 2</th>
+            <th>Post Code</th>
+            <th>Content</th>
+            <th>Updated On</th>
+            <th>Student Grade</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for student in students %}
+        <tr>
+            <td>{{ student.Student_ID }}</td>
+            <td>{{ student.first_name }}</td>
+            <td>{{ student.last_name }}</td>
+            <td>{{ student.Date_of_birth }}</td>
+            <td>{{ student.Email }}</td>
+            <td>{{ student.Address_1 }}</td>
+            <td>{{ student.Address_2 }}</td>
+            <td>{{ student.Post_code }}</td>
+            <td>{{ student.Content }}</td>
+            <td>{{ student.updated_on }}</td>
+            <td>{{ student.Student_Grade }}</td>
+            <td><a href="{% url 'edit_record' Student_ID=student.Student_ID %}">Edit</a></td>
+            <td><a href="#"/>Delete</a></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+</div>
+<p><strong> Hello Get Table !</strong></p>
+
+
+{% endblock %}

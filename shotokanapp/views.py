@@ -3,6 +3,7 @@ from django.views.generic import View
 from django.shortcuts import render, redirect
 from django.views.generic import TemplateView
 from .forms import StudentForm, kyu_creation_form
+from .models import Student_info
 
 
 def student_creation(request):
@@ -14,6 +15,21 @@ def student_creation(request):
     else:
         form = StudentForm()
     return render(request, 'student_creation.html', {'form': form})
+
+
+def student_list(request):
+    students = Student_info.objects.all()
+    return render(request, 'student_get.html', {'students': students})
+
+
+# def student_creation_get(request):
+#     if request.method == 'GET':
+#         # Retrieve the data from the database
+#         students = student_creation.objects.all()
+#         return render(request, 'student_get.html', {'students': students})
+#     else:
+#         form = StudentForm()
+#         return render(request, 'student_get.html', {'form': form})
 
 
 def kyu_creation_view(request):
@@ -38,3 +54,7 @@ class firstpage(View):
 def success_page(request):
     return render(request, 'success_page.html')
 
+
+def edit_record(request, Student_ID):
+    editrecord = Student_info.objects.get(Student_ID=Student_ID)
+    return render(request, 'edit_record.html', {'student': editrecord})
