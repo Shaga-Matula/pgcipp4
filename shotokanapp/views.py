@@ -1,9 +1,10 @@
-from django.http import request
-from django.views.generic import View
 from django.shortcuts import render, redirect
-from django.views.generic import TemplateView
+from django.views.generic import View
+from django.views.generic.edit import UpdateView
 from .forms import StudentForm, kyu_creation_form
 from .models import Student_info
+from .forms import UpdateStudentForm
+
 
 
 def student_creation(request):
@@ -20,16 +21,6 @@ def student_creation(request):
 def student_list(request):
     students = Student_info.objects.all()
     return render(request, 'student_get.html', {'students': students})
-
-
-# def student_creation_get(request):
-#     if request.method == 'GET':
-#         # Retrieve the data from the database
-#         students = student_creation.objects.all()
-#         return render(request, 'student_get.html', {'students': students})
-#     else:
-#         form = StudentForm()
-#         return render(request, 'student_get.html', {'form': form})
 
 
 def kyu_creation_view(request):
@@ -56,5 +47,13 @@ def success_page(request):
 
 
 def edit_record(request, Student_ID):
-    editrecord = Student_info.objects.get(Student_ID=Student_ID)
-    return render(request, 'edit_record.html', {'student': editrecord})
+    student = Student_info.objects.get(Student_ID=Student_ID)
+    if request.method == 'POST':
+        form = UpdateStudentForm(request.POST, instance=student)
+        if form.is_valid():
+            form.save()
+            return redirect('success')  # Redirect to a success page
+    else:
+        form = UpdateStudentForm(instance=student)
+    return render(request, 'edit_record.html', {'form': form, 'student': student})
+

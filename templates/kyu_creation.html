@@ -3,7 +3,7 @@
 {% block content %}
 
 
-<form method="post">
+<form method="post"  class="table table-dark table-bordered table-responsive-lg table-responsive-md table-responsive-sm">
     {% csrf_token %}
     {{ form.as_p }}
     <button type="submit">submit</button>

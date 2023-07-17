@@ -10,5 +10,6 @@ urlpatterns = [
     path('kyu_creation/', views.kyu_creation_view, name='kyu_creation'),
     path('student_get/', views.student_list, name='student_get'),
     path('edit_record/<int:Student_ID>/', views.edit_record, name='edit_record'),
+    
 ]
 
